@@ -1,0 +1,57 @@
+.main-form-booking{
+    /* width: 100%;
+    height: 100%; */
+    width: 500px;
+    height: 170px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* align-items: space-between; */
+    justify-content: center;
+
+    background-image: linear-gradient(180deg,#81274d,#c71155);
+
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-family: Oswald;
+}
+.main-form-booking .title{
+    /* height: 100%; */
+    font-size: 30px;
+    color: #fff;
+}
+.main-form-booking .note{
+    /* height: 100%; */
+    font-size: 19px;
+    color: #fff;
+}
+.main-form-booking .main{
+    height: 60px;
+    /* height: 100%; */
+}
+.main-form-booking .main input{
+    width: 65%;
+    height: 100%;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: x-large;
+    padding-left: 10px;
+}
+.main-form-booking .main input:focus{
+    border: none;
+    outline: none;
+}
+.main-form-booking .main button{
+    height: 100%;
+    width: 35%;
+    font-size: x-large;
+
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fc3;
+}

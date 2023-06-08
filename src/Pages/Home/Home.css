@@ -1,0 +1,49 @@
+.main-home{
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgb(241, 241, 241); */
+    /* background-color: rgb(238, 238, 238); */
+    background-color: #fff;
+}
+.main-home .navbar{
+    /* height: 80px; */
+    width: 100%;
+
+    padding: 0px;
+}
+.main-carousel-slide{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+.main-carousel-slide .form-booking{
+    position: absolute;
+    top: 55%;
+
+}
+.main-carousel-slide .carousel{
+    width: 100%;
+}
+.main-carousel-slide:hover{
+    cursor: pointer;
+}
+.main-carousel-slide .img-carousel{
+    height: 500px;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.main-carousel-slide button{
+    /* opacity: 0.8;
+    transition: 1s; */
+}
+.main-carousel-slide button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.main-carousel-slide button i{
+    color: black;
+    font-size: 30px;
+}

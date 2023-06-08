@@ -1,0 +1,114 @@
+.main-register{
+    height: 100vh;
+    width: 100%;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("https://paulhair.qodeinteractive.com/wp-content/uploads/2023/01/landing-uncovering-section.jpg");
+    /* background-image: url("https://wallpapers.com/images/hd/godzilla-vs-kong-movie-2021-1m2e77q6bpc5zdeg.webp"); */
+    background-size: cover;
+}
+
+.main-register .register-header{
+    font-size: 35px;
+    font-family: Oswald;
+
+    padding-bottom: 10px;
+}
+.main-register .input-form{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+.input-form i{
+    position: absolute;
+    bottom: 9px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.main-register .register-main input{
+    background: rgba(255, 255, 255, 0.18);
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    padding-left:20px;
+    color: white;
+
+    height: 50px;
+
+    margin-top: 20px;
+
+}
+.main-register .register-main input::placeholder {
+    color: #fff;
+}
+.main-register .register-main input:hover,
+.main-register .register-main input:focus{
+    background: none;
+    border: 1px solid #fff;
+
+    outline: none;
+}
+
+.main-register span{
+    /* margin-bottom: 20px; */
+    font-size: 110%;
+    color: rgb(255, 15, 15);
+}
+
+.register-group{
+    width: 400px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.register-group label{
+    margin-left: 5px;
+}
+
+.register-group a{
+    color: #fff;
+    text-decoration: none;
+}
+.register-footer .register{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #fff;
+
+    text-align: center;
+}
+
+.register-footer .login{
+    padding-top: 20px;
+}
+.register-footer .btn-register{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+.register-footer .btn-login{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: Oswald;
+    font-size: 20px;
+}
+

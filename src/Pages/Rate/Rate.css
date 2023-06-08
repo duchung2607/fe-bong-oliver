@@ -1,0 +1,95 @@
+.main-rate{
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 0px;
+}
+.main-rate .content-rate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+.main-rate .title{
+    font-family: Oswald;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    color: var(--green);
+}
+.main-rate .content{
+    border: 1px solid;
+    padding: 30px 50px;
+    width: 100%;
+}
+.main-rate .service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-rate .image-service{
+    height: 350px;
+    width: 350px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-rate .name-service{
+    margin-bottom: 20px;
+}
+.main-rate .name-service span{
+    font-size: xx-large;
+    font-family: Be Vietnam,sans-serif;
+}
+.main-rate .image-service img{
+    width: 300px;
+    height: 300px;
+}
+
+.main-rate .rate-service{
+    width:80%;
+    display: flex;
+    align-items: center;
+    padding-bottom : 20px;
+}
+.star{
+    margin: 0px 10px;
+}
+.star:hover {
+    cursor: url("https://cdn-icons-png.flaticon.com/512/1791/1791330.png"),auto!important;
+    /* height: 50px;
+    border: 1px solid red; */
+}
+.main-rate .comment-service{
+    width: 80%;
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+.main-rate .comment-service .comment{
+    width: 100%;
+    border: 1px solid #a6a6a6;
+}
+.main-rate .comment-service .comment:focus{
+    /* border: 1px solid #a6a6a6; */
+    outline: none;
+}
+
+@media screen and (max-width: 750px) {
+    .main-rate .image-service{
+        height: 250px;
+        width: 250px;
+    }
+    .main-rate .rate-service .title-rate{
+        display: none;
+    }
+    .main-rate .rate-service{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main-rate .image-service img{
+        width: 200px;
+        height: 200px;
+    }
+}

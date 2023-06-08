@@ -1,0 +1,142 @@
+.main-my-walet{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+}
+.main-my-walet .navbar{
+    width: 100%;
+
+    padding: 0px;
+}
+.main-my-walet .main{
+    /* margin-top: 50px; */
+    height: 100%;
+    /* height: 500px; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.main-my-walet .content{
+    margin-top: 30px;
+    width: 80%;
+    height: 100%;
+    
+    display: flex;
+
+}
+/* .main-my-walet .content .menu{
+    width: 30%;
+    height: 100%;
+} */
+.main-my-walet .form-info{
+    width: 75%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    /* margin-left: 20px; */
+
+    padding: 20px;
+}
+/* ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-my-walet .content li{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-family: Oswald;
+    font-size: 20px;
+    padding-left: 20px;
+    border-bottom: 2px solid grey;
+
+    cursor: pointer;
+}
+.main-my-walet .content li:hover{
+    background-color: rgb(203, 203, 203);
+}
+
+.avatar-user{
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+
+    border-radius: 50px;
+}
+.main-my-walet .content i{
+    margin-right: 10px;
+    height: 45px;
+    width: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.main-my-walet .form-info label{
+    /* font-size: 1.125rem; */
+    font-family: sans-serif;
+}
+.main-my-walet .form-info .row{
+    /* height: 65px; */
+
+    margin-bottom: 15px;
+}
+.main-my-walet .form-info .col
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.main-my-walet .form-info input,select{
+    height: 48px;
+
+    /* font-size: 1.125rem; */
+    font-family: sans-serif;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: rgb(239, 239, 239);
+}
+.main-my-walet .form-info input:focus{
+    outline: none;
+}
+
+.main-my-walet .form-info button{
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+
+    background-color: #fc3;
+    font-family: Oswald;
+    font-size: 20px;
+
+    min-width: 90px;
+}
+
+
+.main-my-walet .form-info .verify{
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-left: 10px;
+}
+
+/* .menu a{
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+} */
+
+@media screen and (max-width: 750px) {
+    .main-my-walet .form-info{
+        width: 100%;
+    }
+}

@@ -1,0 +1,143 @@
+.main-service {
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgb(241, 241, 241); */
+    /* background-color: rgb(238, 238, 238); */
+    background-color: #fff;
+}
+
+.main-service .navbar {
+    width: 100%;
+    padding: 0px;
+}
+
+.main-service .main .border-carousel {
+    height: 110px;
+
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 2px solid rgb(175, 175, 175);
+}
+
+.main-service .main-border-carousel {
+    display: grid;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.item-border-carousel {
+    border-left: 1px solid rgb(132, 132, 132);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60%;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Oswald';
+}
+
+.item-border-carousel:first-child {
+    border: none;
+}
+
+.item-border-carousel img {
+    margin-right: 20px;
+}
+
+.main-service .list-service {
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* gap: 20px; */
+
+    height: auto;
+    width: 70%;
+
+    background-color: #fff;
+}
+
+.group-service {
+    margin-top: 20px;
+}
+
+.title-list-service {
+    width: 70%;
+    height: 50px;
+    /* background-color: red; */
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Oswald;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 5px;
+    /* margin-left: 10px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-left: 10px solid #fc3;
+} 
+
+@media screen and (max-width: 1300px) {
+    .main-service .list-service {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .main-service .list-service {
+        grid-template-columns: 100%;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .main .menu-tab{
+        display: none;
+    }
+}
+
+
+
+.menu-tab{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(123, 123, 255);
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-tab ul{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+}
+.menu-tab li {
+    list-style: none;
+    color: #fff;
+    font-family: Oswald;
+    font-size: 20px;
+}
+.menu-tab a{
+    text-decoration: none;
+}

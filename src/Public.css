@@ -1,0 +1,77 @@
+.error{
+    color: red;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-12{
+    grid-template-columns: repeat(12,minmax(0,1fr));
+}
+.col-span-2 {
+    grid-column: span 2/span 2;
+}
+.col-span-4 {
+    grid-column: span 4/span 4;
+}
+.col-span-6 {
+    grid-column: span 6/span 6;
+}
+.col-span-8 {
+    grid-column: span 8/span 8;
+}
+.col-span-12 {
+    grid-column: span 12/span 12;
+}
+.flex-end{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.be {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 300;
+}
+
+.button{
+    /* height: 48px; */
+    border: 1px solid;
+    color: #000;
+    background-color: #fff;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+}
+
+.button-fc3{
+    background-color: #fc3;
+    border: none;
+}
+
+.btn-status{
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 5px;
+    width: 100px;
+}
+.center{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+:root{
+    --yellow : #fc3;
+    /* --green : #198754; */
+    --green: rgba(17,177,75,1);
+    --red : #dc3545;
+    --blue: #0d6efd;
+}

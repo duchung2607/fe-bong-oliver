@@ -1,0 +1,64 @@
+.time-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-item {
+    height: 48px;
+    /* width: 60px; */
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px;
+}
+
+.disable {
+    border: 1px solid #d1d1d1;
+    background: #e8e8e8;
+    color: #a3a3a3;
+    cursor: not-allowed;
+}
+
+.main-choose-time .dropdown button{
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: #000;
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+.main-choose-time .dropdown .dropdown-menu{
+    width: 100%;
+    border-radius: 2px;
+    padding: 0;
+}
+.main-choose-time .dropdown .dropdown-menu li{
+    border-bottom: 1px solid #e8e8e8;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+}
+.main-choose-time .dropdown .dropdown-menu li:hover{
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+.main-choose-time .dropdown .dropdown-menu li span{
+    padding-left: 40px;
+}
+.main-choose-time .dropdown .dropdown-menu li span:hover{
+    /* padding-left: 40px; */
+    background-color: #e8e8e8;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #000;
+}

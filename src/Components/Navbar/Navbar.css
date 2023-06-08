@@ -1,0 +1,131 @@
+.main-navbar{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    box-shadow: 0px 3px 10px rgba(96, 96, 96, 0.6);
+
+    position: relative;
+    z-index: 1;
+}
+.main-navbar .navbar-content{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-navbar .menu a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    text-decoration: none;
+}
+.main-navbar a:hover{
+    color: black;
+}
+.main-navbar .navbar-logo .img-navbar-logo{
+    height: 60px;
+    transition: 0.3s;
+
+    filter: brightness(0);
+  -webkit-filter: brightness(0);
+}
+.main-navbar .img-navbar-logo:hover{
+    height: 70px;
+}
+
+.main-navbar .navbar-menu{
+    height: 100%;
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+}
+.main-navbar .navbar-menu .menu{
+    height: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+
+    display: flex;
+    align-items: center;
+}
+.main-navbar  .menu-item{
+    height: 80%;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #fff;
+    opacity: 1;
+    transition: 1s;
+}
+.main-navbar .menu-item:hover{
+    border-bottom: 2px solid black;
+    opacity: 1;
+}
+.main-navbar .navbar-menu .menu .menu-item:hover{
+    cursor: pointer;
+}
+.main-navbar .navbar-menu .menu .menu-item .item-text{
+    font-family: Oswald;
+    font-size: 1.3rem;
+}
+
+.navbar-footer .btn-login{
+    background-color: #fc3;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+}
+.navbar-footer .btn-login:hover{
+    background-color: rgb(239, 181, 6);
+}
+.navbar-footer span{
+    margin-left: 10px;
+    font-weight: 500;
+    font-family: Oswald;
+    font-size: 19px;
+}
+
+.group-button .dropdown-menu[data-bs-popper]{
+    top: auto;
+    left: auto;
+    margin-top: 2px;
+}
+
+.group-button .dropdown-menu i{
+    margin-right: 10px;
+}
+.group-button .dropdown-menu a{
+    opacity: 1;
+    transition: 1s;
+}
+.group-button .dropdown-menu a:hover{
+    background-color: rgb(223, 223, 223);
+}
+.group-button .dropdown-menu li{
+    font-family: Oswald;
+}
+/* .group-button .dropdown-menu li:hover{
+    background-color: rgb(189, 189, 189);
+} */
+
+@media only screen and (max-width: 1050px) {
+    .navbar-menu{
+        display: none!important;
+    }
+}

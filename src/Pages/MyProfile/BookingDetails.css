@@ -1,0 +1,205 @@
+.main-booking-details {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+}
+
+.main-booking-details .main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-booking-details .content {
+    margin-top: 30px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+.main-booking-details .booking-info {
+    width: 75%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    /* margin-left: 20px; */
+    padding: 20px;
+}
+
+.information {
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding: 10px 0px;
+}
+
+.status {
+    padding: 10px 10px;
+}
+
+.main-booking-details .list-service {
+    border-bottom: 1px solid;
+}
+
+.main-booking-details .list-service .service-item {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+.main-booking-details .list-service .service-item:last-child {
+    border-bottom: none;
+}
+
+.main-booking-details .list-service .image-service {
+    height: 80px;
+    width: 100px;
+    object-fit: cover;
+    padding-left: 20px;
+}
+
+.main-booking-details .list-service .service-info {
+    width: 83%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-booking-details .list-service .service-info .infor {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.main-booking-details .des {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.main-booking-details .list-service .service-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main-booking-details .list-service .infor span:first-child {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: Oswald;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main-booking-details .list-service .price {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: Oswald;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    /* font-family: 'Be Vietnam', sans-serif; */
+}
+
+.main-booking-details .price .link-rate {
+    color: rgb(255, 193, 6);
+    font-family: Be Vietnam, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.total {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+.total .label-total {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Oswald;
+}
+
+.total .count-total {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Oswald;
+    color: rgba(228, 64, 49, 1);
+}
+
+.pay-mode {
+    border-bottom: 1px solid;
+}
+
+.main-booking-details .group-button {
+    margin: 0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-booking-details .button {
+    border-radius: 5px;
+    height: 48px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 500;
+}
+
+.header-information {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.header-status {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.main-booking-details .wait {
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.main-booking-details .done {
+    text-transform: uppercase;
+    color: var(--green);
+}
+@media screen and (max-width: 1200px) {
+    .main-booking-details .list-service .service-info{
+        width: 70%;
+    }
+    .main-booking-details .list-service .service-info .infor{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main-booking-details .booking-info {
+        width: 100%;
+    }
+    .main-booking-details .list-service .image-service{
+        padding-right: 0;
+    }
+    .main-booking-details .list-service .price{
+        width: auto;
+    }
+    .main-booking-details .list-service .service-info .infor{
+        display: none;
+    }
+    .main-booking-details .list-service .service-info{
+        justify-content: end;
+    }
+}

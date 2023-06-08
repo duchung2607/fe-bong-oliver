@@ -1,0 +1,91 @@
+.main-not-found{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+}
+.main-not-found img{
+    height: 250px;
+    filter: brightness(0);
+  -webkit-filter: brightness(0);
+}
+.big-icon{
+    font-size: 1800%;
+}
+.icon-not-found{
+    color: #606060;
+}
+.error-name{
+    color: #ff4c4c;
+    font-size: 150px;
+    font-weight: 900;
+    font-family: fantasy;
+}
+.error-title{
+    color: #ff4c4c;
+    font-family: fantasy;
+    font-size: 400%;
+}.btn-home{
+    margin-top: 10px;
+}
+
+
+h1,h2,h3,h4,h5,h6,p
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.error_container
+{
+	width: 100%;
+	height: 100vh;
+}
+
+.error_block
+{
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.error_block h1
+{
+    font-weight: 900;
+	font-size: 80px;
+	color: #000;
+	/* color: #3f3a64; */
+}
+
+.error_block h3
+{
+	font-size: 40px;
+	/* color: #000; */
+	/* color: #3f3a64; */
+}
+
+.error_btn
+{
+	width: 250px;
+    /* background: #20ad96; */
+    background: #fc3;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+.error_btn:hover
+{
+    color: #000;
+    background: rgb(238, 191, 47);
+}

@@ -1,0 +1,128 @@
+.main-login{
+    height: 100vh;
+    width: 100%;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("https://paulhair.qodeinteractive.com/wp-content/uploads/2023/01/landing-uncovering-section.jpg");
+    /* background-image: url("https://wallpapers.com/images/high/marvel-3440-x-1440-226llx9be5dff48o.webp"); */
+    background-size: cover;
+}
+
+.main-login .login-header{
+    font-size: 35px;
+    font-family: Oswald;
+
+    padding-bottom: 30px;
+}
+.main-login .input-form{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+.input-form i{
+    position: absolute;
+    bottom: 9px;
+    right: 10px;
+    font-size: 20px;
+}
+.input-form i:hover{
+    cursor: pointer;
+}
+.main-login .login-main input{
+    background: rgba(255, 255, 255, 0.18);
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    padding-left:20px;
+    color: white;
+
+    height: 50px;
+
+}
+.main-login .login-main input::placeholder {
+    color: #fff;
+}
+.main-login .login-main input:hover,
+.main-login .login-main input:focus{
+    background: none;
+    border: 1px solid #fff;
+
+    outline: none;
+}
+
+.main-login span{
+    margin-bottom: 20px;
+    font-size: 110%;
+    color: rgb(255, 15, 15);
+}
+
+.login-group{
+    width: 400px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.login-group label{
+    margin-left: 5px;
+}
+
+.login-group a{
+    color: #fff;
+    text-decoration: none;
+}
+.login-footer .login{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #fff;
+
+    text-align: center;
+}
+
+.login-footer .register{
+    padding-top: 20px;
+}
+.login-footer .btn-login{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+.login-footer .btn-register{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+.main-login .forgot-password:focus{
+    outline: none;
+}
+
+.main-login .form-check-input:checked{
+    border: none;
+    background-color: black;
+}
+.main-login .form-check-input:focus{
+    box-shadow: none;
+    border: none;
+
+    cursor: pointer;
+}

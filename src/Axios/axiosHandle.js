@@ -1,0 +1,28 @@
+import axios from "axios";
+
+const instance = axios.create(
+    {
+        baseURL: process.env.REACT_APP_URL_API,
+        timeout: 300000
+    }
+);
+
+instance.interceptors.request.use(
+    (config) => {
+        config.headers.Authorization = `Bearer ${sessionStorage.getItem('token')}`;
+        return config;
+    },
+    error => {
+        Promise.reject(error);
+    }
+);
+
+instance.interceptors.response.use(
+    (response) => {
+        return response.data
+    },
+    (error) => {
+        console.log(error)
+    }
+);
+export default instance;
