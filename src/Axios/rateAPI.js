@@ -29,3 +29,7 @@ export const createRate = (createRate) => {
         },
     );
 }
+
+export const getRateByService = (id) => {
+    return axiosHandle.get(`https://localhost:7125/api/rate/service/${id}`)
+}

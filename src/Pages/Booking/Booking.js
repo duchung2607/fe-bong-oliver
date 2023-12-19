@@ -12,6 +12,7 @@ import ChooseTime from '../../Components/Choose/ChooseTime'
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 import Loading from '../../Components/Loading/Loading'
+import { addNotification, useNotifications } from '../../firebase/function'
 // import PopUpPhone from '../../Components/PopupPhone/PopUpPhone'
 function Booking() {
     // const params = useParams()
@@ -28,30 +29,36 @@ function Booking() {
     const [services, setService] = useState([])
     const [stylist, setStylist] = useState()
     const [time, setTime] = useState()
+    const [description, setDescription] = useState("")
     const [wait, setWait] = useState(false)
+    const notificationList = useNotifications()
     // const [date, setDate] = useState()
 
     useEffect(() => {
         setStep(params.get("step"))
     }, [params, services, stylist, time])
 
+    console.log(notificationList)
     const handleSubmit = async () => {
         if (Validate()) {
             setWait(true)
             try {
                 var booking = {
                     time: time,
-                    description: user ? user.fullname : "Guest " + phone,
+                    description: user ? user.fullname + ". " + description : "Guest " + phone + ". " + description,
                     status: "wait",
-                    userId: user ? user.id : 11,
+                    userId: user ? user.id : 2,
                     stylistId: stylist,
                     serviceIds: services
                 }
 
-                console.log(booking)
                 var res = await axios.post("https://localhost:7125/api/booking/create", booking)
-                if (res?.data?.code == 200)
-                    navigate("/")
+                console.log(res?.data?.code)
+                if (res?.data?.code == 200) {
+                    addNotification(stylist, (user ? user.fullname : "Khách") + " đã đặt lịch", `booking`)
+                    addNotification(1,  (user ? user.fullname : "Khách") + " đã đặt lịch", `booking`)
+                    user ? navigate("/my-history") : navigate("/")
+                }
             } catch (e) {
 
             }
@@ -109,7 +116,7 @@ function Booking() {
     return (
         <div className={modelOpen ? 'main-booking modal-open' : "main-booking"} style={{ overflow: "hidden", paddingRight: "0px", }}>
             {
-                wait&& <Loading />
+                wait && <Loading />
             }
             {
                 modelOpen &&
@@ -170,13 +177,13 @@ function Booking() {
                             }
                             >
                                 <div>
-                                    <img src='https://30shine.com/static/media/service.3a62b101.svg' />
+                                    {/* <img src='https://30shine.com/static/media/service.3a62b101.svg' /> */}
                                 </div>
                                 <div className='text' style={{ width: "100%" }}>
                                     Đã chọn {services.length} dịch vụ
                                 </div>
                                 <div>
-                                    <img src='https://30shine.com/static/media/caretRight.b0d191b3.svg' />
+                                    {/* <img src='https://30shine.com/static/media/caretRight.b0d191b3.svg' /> */}
                                 </div>
                             </div>
                             {/* {
@@ -212,7 +219,7 @@ function Booking() {
                             }
                             >
                                 <div>
-                                    <img src='https://30shine.com/static/media/user-large.69c611a8.svg' />
+                                    {/* <img src='https://30shine.com/static/media/user-large.69c611a8.svg' /> */}
                                 </div>
                                 <div className='text' style={{ width: "100%" }}>
                                     {
@@ -220,7 +227,7 @@ function Booking() {
                                     }
                                 </div>
                                 <div>
-                                    <img src='https://30shine.com/static/media/caretRight.b0d191b3.svg' />
+                                    {/* <img src='https://30shine.com/static/media/caretRight.b0d191b3.svg' /> */}
                                 </div>
                             </div>
                             {
@@ -254,13 +261,13 @@ function Booking() {
                             )
                             }>
                                 <div>
-                                    <img src='https://30shine.com/static/media/calendar-2.3c77d299.svg' />
+                                    {/* <img src='https://30shine.com/static/media/calendar-2.3c77d299.svg' /> */}
                                 </div>
                                 <div className='text' style={{ width: "100%" }}>
                                     {!time ? "Chọn lịch làm tóc" : "Time: " + (time.replace("T", " "))}
                                 </div>
                                 <div>
-                                    <img src='https://30shine.com/static/media/caretRight.b0d191b3.svg' />
+                                    {/* <img src='https://30shine.com/static/media/caretRight.b0d191b3.svg' /> */}
                                 </div>
                             </div>
                             {
@@ -279,6 +286,24 @@ function Booking() {
                                 />
                             }
 
+                        </div>
+                        <div className='description'>
+                            <div className='lable'>4. Yêu cầu khác</div>
+                            <div className='des'>
+                                <textarea
+                                    style={{
+                                        width: "100%",
+                                        border: "none",
+                                        borderBottom: "2px solid #fc3",
+                                        outline: "none",
+                                        padding: "10px 15px",
+                                        fontFamily: "sans-serif",
+                                        fontSize: "15px"
+                                    }}
+                                    placeholder='VD: Chuẩn bị cho tôi một skinner...'
+                                    onChange={(e) => setDescription(e.target.value)}
+                                ></textarea>
+                            </div>
                         </div>
                     </div>
                     <div className='bottom'>

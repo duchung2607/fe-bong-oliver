@@ -13,20 +13,23 @@
 
     padding: 0px;
 }
-.main-service-details .container{
+
+.main-service-details .container {
     width: 70%;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
 }
-.main-service-details .price{
+
+.main-service-details .price {
     text-align: center;
     display: flex;
     justify-content: center;
 
     margin-bottom: 30px;
 }
-.main-service-details .price div{
+
+.main-service-details .price div {
     width: 300px;
     border: 1px solid #000;
     height: 48px;
@@ -41,10 +44,12 @@
     /* color: #fc3; */
     font-size: 25px;
 }
-.main-service-details .price div strong{
+
+.main-service-details .price div strong {
     font-size: 30px;
 }
-.banner{
+
+.banner {
     background-color: #000;
     display: flex;
     /* flex-direction: c; */
@@ -52,35 +57,82 @@
     box-shadow: 0px 30px 25px rgb(123, 122, 122);
     margin-bottom: 50px;
 
+    position: relative;
 }
-.banner .img-banner{
+
+.main-service-details .group-star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    z-index: 1;
+    background-size: cover;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner .img-banner {
     height: auto;
     max-height: 500px;
     min-width: 300px;
     object-fit: fill;
     /* box-shadow: 0px 30px red; */
 }
-.info{
+
+.info {
     display: flex;
     justify-content: center;
 }
-.info .des{
+
+.info .des {
     /* width: 60%; */
     width: 80%;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: large;
-    text-indent: 60px;
+    /* text-indent: 60px; */
 }
 
-.main-service-details .group-button
-{
+.info .des div p {
+    width: 100%;
+    display: inline-block;
+    text-align: justify;
+    white-space: normal;
+}
+
+/* .info .des div strong {
+    display: inline-block;
+    text-align: center;
+    white-space: normal;
+} */
+.main-service-details h1,
+.main-service-details h2,
+.main-service-details h3,
+.main-service-details h4,
+.main-service-details h5{
+    text-align: center;
+    margin: 20px 0px;
+}
+.main-service-details p{
+    margin: 0px;
+}
+
+.main-service-details .info .des p img{
+    width: 100%;
+    text-align: center;
+    padding: 10px 50px;
+}
+
+.main-service-details .group-button {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
-.main-service-details .button{
-    border: none;
+
+.main-service-details .button {
+    /* border: none; */
     border-radius: 5px;
     height: 48px;
 
@@ -89,11 +141,84 @@
 
     font-weight: 500;
 }
+
 .main-service-details .left {
     border: 1px solid #000;
     margin-right: 10px;
 }
-.main-service-details .right{
+
+.main-service-details .right {
     background-color: #fc3;
     margin-left: 10px;
+}
+
+.main-service-details .rating {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.main-service-details .lable-rate {
+    border: 1px solid #767676;
+    color: #767676;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.main-service-details .rate {
+    border: 1px solid #767676;
+    padding: 10px 20px;
+}
+
+.main-service-details .rate-item {
+    border-bottom: 1px solid #b0b0b0;
+    padding: 10px 0px 10px 0px;
+}
+
+.main-service-details .group-star .star {
+    font-size: 45px;
+}
+
+.main-service-details .rate-comment {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+.main-service-details .list-service .label-list-service{
+    width: 100%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Oswald;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 10px solid #fc3;
+    text-transform: uppercase;
+}
+.main-service-details .main .container .name{
+    text-align: center;
+    font-size: 30px;
+    font-family: "Oswald";
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 750px) {
+    .main-service-details .group-star .star {
+        font-size: 20px;
+        transform: translate(-50%, 175%);
+    }
 }

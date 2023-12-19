@@ -45,6 +45,7 @@
 .main-rate .image-service img{
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
 .main-rate .rate-service{
@@ -53,10 +54,10 @@
     align-items: center;
     padding-bottom : 20px;
 }
-.star{
+.main-rate .star{
     margin: 0px 10px;
 }
-.star:hover {
+.main-rate .star:hover {
     cursor: url("https://cdn-icons-png.flaticon.com/512/1791/1791330.png"),auto!important;
     /* height: 50px;
     border: 1px solid red; */

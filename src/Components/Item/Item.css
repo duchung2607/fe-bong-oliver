@@ -22,8 +22,37 @@
     height: 100%;
     width: 100%;
 }
-.main-item .img-item{
+
+
+
+.image-item {
+    /* padding: 0px 10px; */
     height: 80%;
+    min-width: 100%;
+    width: 100%;
+}
+.image-item img{
+	display:block;
+	transition: all .3s ease;
+    height: 100%;
+}
+.image-item img:hover{
+	transform: scale(1.05); /* cỡ zoom khi di chuột vào */
+} 
+.image-item div{
+	display:block;
+	overflow: hidden;
+}
+
+
+/* .main-home .image{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+} */
+.main-item .img-item{
+    /* height: 80%; */
+    height: 100%;
     min-width: 100%;
     width: 100%;
     object-fit: cover;
@@ -32,13 +61,12 @@
     border-top-right-radius: 3px;
 
 
-    filter: grayscale(90%);
+    filter: grayscale(50%);
     transition:  all .2s ease-in-out;
 }
 .main-item .img-item:hover{
     opacity: 1;
     filter: grayscale(0);
-
     /* transform: scale(1.4); */
 }
 .main-item .content-item{
@@ -60,11 +88,18 @@
 .main-item .title{
     font-size: 130%;
     height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .main-item .des{
     height: 100%;
     font-size: 110%;
     color: #fc3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .check{

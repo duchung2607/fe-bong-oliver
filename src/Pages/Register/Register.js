@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Register.css'
 import { useNavigate } from 'react-router-dom'
 import { register } from '../../Axios/handleAPI'
+import { addNotification } from '../../firebase/function'
 
 function Register() {
     const navigate = useNavigate()
@@ -36,7 +37,10 @@ function Register() {
 
         if (validate()) {
             var res = await register(user)
-            navigate("/login")
+            if(res?.data?.code == 200){
+                addNotification(1, "Có user đăng ký tài khoản mới", "users")
+                navigate("/login")
+            }
         }
     }
     return (

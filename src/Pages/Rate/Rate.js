@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import './Rate.css'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { getBookingByID, getServiceById } from '../../Axios/handleAPI'
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 import { createRate } from '../../Axios/rateAPI'
+import Loading from '../../Components/Loading/Loading'
+import Success from '../../Components/Success/Success'
 
 function Rate() {
     const [params, setParams] = useSearchParams()
     const [service, setService] = useState()
     const [rating, setRating] = useState(0);
     const [comment, setComment] = useState('');
+    const [success, setSuccess] = useState(false)
+    const [wait, setWait] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetchData()
@@ -27,8 +32,9 @@ function Rate() {
     }
 
     const handSubmit = async () => {
+        setWait(true)
         try {
-            var data = {
+        var data = {
                 rate: rating,
                 comment: comment,
                 userId: jwtDecode(sessionStorage.getItem("token")).id,
@@ -37,13 +43,24 @@ function Rate() {
 
             var res = await createRate(data)
             console.log(res)
+            setSuccess(true)
+            setTimeout(() => {
+                navigate("/my-history")
+              }, 1500);
         } catch (e) {
             console.log(e)
         }
+        setWait(false)
     }
 
     return (
         <div className='main-rate'>
+            {
+                wait&& <Loading />
+            }
+            {
+                success&& <Success message= {"Cảm ơn bạn đã đánh giá dịch vụ tại Bổng Oliver"}/>
+            }
             <div className='content-rate'>
                 <div className='title'>
                     Cảm ơn bạn đã sử dụng dịch vụ tại Bổng Oliver

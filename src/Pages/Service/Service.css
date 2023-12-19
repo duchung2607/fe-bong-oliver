@@ -13,9 +13,9 @@
 }
 
 .main-service .main .border-carousel {
-    height: 110px;
+    height: 70px;
 
-    background-color: #fff;
+    background-color: rgba(175, 175, 175, 0.5);
 
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
 
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .item-border-carousel {
@@ -46,6 +46,8 @@
     padding: 30px;
     font-size: 20px;
     font-family: 'Oswald';
+
+    text-transform: uppercase;
 }
 
 .item-border-carousel:first-child {
@@ -140,4 +142,26 @@
 }
 .menu-tab a{
     text-decoration: none;
+}
+
+.main-service .search-group{
+    width: 70%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: right;
+}
+.main-service .search-group select{
+    width: 50%;
+    background-color: #fc3;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+.main-service .search-group select option{
+    width: 100%;
+    border-radius: 0px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    /* color: #fff; */
 }

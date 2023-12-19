@@ -12,7 +12,7 @@
 }
 
 .main-booking-details .content {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 80%;
     height: 100%;
     display: flex;
@@ -21,12 +21,12 @@
 .main-booking-details .booking-info {
     width: 75%;
     height: 100%;
-    min-height: 400px;
+    min-height: 500px;
     background-color: #fff;
     border-radius: 3px;
-    margin-bottom: 20px;
     /* margin-left: 20px; */
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 .information {
@@ -57,16 +57,18 @@
 }
 
 .main-booking-details .list-service .image-service {
-    height: 80px;
-    width: 100px;
+    height: 180px;
+    width: 200px;
     object-fit: cover;
     padding-left: 20px;
 }
 
 .main-booking-details .list-service .service-info {
-    width: 83%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
+
+    padding-left: 20px;
 }
 
 .main-booking-details .list-service .service-info .infor {
@@ -137,8 +139,10 @@
     color: rgba(228, 64, 49, 1);
 }
 
-.pay-mode {
+.main-booking-details .pay-mode {
     border-bottom: 1px solid;
+
+    padding: 10px 0px;
 }
 
 .main-booking-details .group-button {
@@ -177,6 +181,12 @@
     text-transform: uppercase;
     color: var(--green);
 }
+
+.main-booking-details .cancel {
+    text-transform: uppercase;
+    color: var(--red);
+}
+
 @media screen and (max-width: 1200px) {
     .main-booking-details .list-service .service-info{
         width: 70%;

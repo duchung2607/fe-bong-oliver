@@ -35,10 +35,10 @@ export const getMyProfile = () => {
     });
 }
 
-export const getMyHistoryBooking = (page, pageSize) => {
+export const getMyHistoryBooking = (username, page, pageSize) => {
     return axios({
         method: "get",
-        url: `https://localhost:7125/api/booking/user/hoahong7012?page=${page}&pageSize=${pageSize}&sortBy=create`,
+        url: `https://localhost:7125/api/booking/user/${username}?page=${page}&pageSize=${pageSize}&sortBy=create`,
         headers: {
             "Authorization": `Bearer ${sessionStorage.getItem('token')}`,
         },
@@ -120,14 +120,12 @@ export const checkPayMent = (url) => {
         },
     });
 }
-
 export const checkPayIn = (url) => {
     return axios({
         method: "get",
-        url: `${url}`,
+        url: `https://localhost:7125/api/VnPay/payin${url}`,
         headers: {
             "Authorization": `Bearer ${sessionStorage.getItem('token')}`,
-            "Content-Type": "application/json"
         },
     });
 }

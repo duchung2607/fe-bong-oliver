@@ -118,8 +118,8 @@ function ChooseTime(props) {
       <div className="dropdown">
         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <div>
-            <img src="https://30shine.com/static/media/calendar-2.3c77d299.svg"
-              style={{ paddingRight: "10px" }} />
+            {/* <img src="https://30shine.com/static/media/calendar-2.3c77d299.svg"
+              style={{ paddingRight: "10px" }} /> */}
             Chọn ngày làm tóc
           </div>
         </button>

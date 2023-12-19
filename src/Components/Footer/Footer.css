@@ -1,7 +1,7 @@
 .main-footer{
     /* margin-top: 50px; */
     background-color: black;
-    min-height: 250px;
+    min-height: 350px;
     width: 100%;
 
     font-family: Oswald;
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
 
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #a2a2a2;
 }
 .footer-col{

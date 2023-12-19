@@ -25,11 +25,17 @@ import NotFound from './Pages/NotFound/NotFound.js';
 import Footer from './Components/Footer/Footer';
 import BookingDetails from './Pages/MyProfile/BookingDetails';
 import Rate from './Pages/Rate/Rate';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import Verify from './Pages/Vefiry/Verify';
+import PayIn from './Pages/VnPay/PayIn';
+import Chat from './Components/Chat/Chat';
+import HairStyleDetail from './Pages/HairStyle/HairStyleDetail';
 
 function Layout() {
   return (
     <div className="main-screen">
       <Navbar />
+      <Chat />
       <Outlet />
       <Footer />
     </div>
@@ -49,6 +55,7 @@ function App() {
           <Route path='service/:id' element={<ServiceDetails />} />
 
           <Route path='hair-style' element={<ViewHairStyle />} />
+          <Route path='hair-style/:id' element={<HairStyleDetail />} />
 
           <Route path='shop' element={<Shop />} />
 
@@ -61,11 +68,13 @@ function App() {
           <Route path='/rate' element={<Rate />} />
 
           <Route path='/vnpay-return' element={<VnPay />} />
+          <Route path='/payin-return' element={<PayIn />} />
         </Route>
-        
+
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path='/verify-return' element={<Verify />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>

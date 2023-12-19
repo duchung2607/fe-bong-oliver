@@ -3,12 +3,15 @@ import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from './a.png'
 import jwtDecode from 'jwt-decode'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import SmallSlideBar from '../SmallSlideBar/SmallSlideBar'
 
 function Navbar() {
     const navigate = useNavigate()
     const [user, setUser] = useState()
     const [isLogin, setIsLogin] = useState(true)
-
+    const [showMenu, setShowMenu] = useState(false)
     useEffect(() => {
         if (sessionStorage.getItem("token") != null) {
             const user = jwtDecode(sessionStorage.getItem("token"))
@@ -18,7 +21,7 @@ function Navbar() {
     const handleLogout = (e) => {
         e.preventDefault()
         sessionStorage.removeItem('token')
-        window.location.reload()
+        window.location = "/"
     }
     return (
         <div className='main-navbar'>
@@ -31,6 +34,11 @@ function Navbar() {
                 </div>
                 <div className='navbar-menu'>
                     <ul className='menu'>
+                        <Link to='/'>
+                            <li className='menu-item'>
+                                <div className='item-text'>TRANG CHỦ</div>
+                            </li>
+                        </Link>
                         <Link to='/service'>
                             <li className='menu-item'>
                                 <div className='item-text'>TRẢI NGHIỆM DỊCH VỤ</div>
@@ -39,11 +47,6 @@ function Navbar() {
                         <Link to='/hair-style'>
                             <li className='menu-item'>
                                 <div className='item-text'>KHÁM PHÁ KIỂU TÓC</div>
-                            </li>
-                        </Link>
-                        <Link to='/shop'>
-                            <li className='menu-item'>
-                                <div className='item-text'>BỔNG SHOP</div>
                             </li>
                         </Link>
                         {/* <Link to='/'>
@@ -120,6 +123,12 @@ function Navbar() {
                             <li className="dropdown-item"><i className="bi bi-box-arrow-right" />Logout</li>
                         </ul> */}
                     </div>
+                    <div className='navbar-menu-icon'>
+                        <FontAwesomeIcon icon={faBars} onClick={()=>setShowMenu(!showMenu)}/>
+                    </div>
+                    {
+                        showMenu&& <SmallSlideBar handleShowSlide = {setShowMenu} user = {user}/>
+                    }
                 </div>
             </div>
         </div>

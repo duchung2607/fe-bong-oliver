@@ -20,7 +20,7 @@
 }
 
 .main-my-history-booking .content {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 80%;
     height: 100%;
 
@@ -38,9 +38,9 @@
     height: 100%;
     background-color: #fff;
     border-radius: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     /* margin-left: 20px; */
-    min-height: 400px;
+    min-height: 500px;
     padding: 20px;
 }
 .main-my-history-booking .table-history td{
@@ -152,6 +152,12 @@ select {
 }
 .main-my-history-booking .wait {
     background-color: var(--green);
+    color: #fff;
+    border: none;
+}
+
+.main-my-history-booking .cancel {
+    background-color: var(--red);
     color: #fff;
     border: none;
 }

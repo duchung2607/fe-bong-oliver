@@ -48,7 +48,13 @@ function Login() {
                 error.username = "Tên đăng nhập không tồn tại"
                 setErrors(error)
             }
-            else {
+            else 
+            if(e.response.data.message == "Tài khoản của bạn đã bị vô hiệu"){
+                error.username = "Tài khoản của bạn đã bị vô hiệu!"
+                setErrors(error)
+            }
+            else
+            {
                 error.password = "Mật khẩu không đúng"
                 setErrors(error)
             }
@@ -76,12 +82,12 @@ function Login() {
                 }
             </div>
             <div className='login-group'>
-                <div className='remember'>
+                {/* <div className='remember'>
                     <input className="form-check-input" type="checkbox" id="flexCheckDefault" />
                     <label className="form-check-label" htmlFor="flexCheckDefault">
                         Remember me?
                     </label>
-                </div>
+                </div> */}
                 <Link to='/forgot-password'>
                     <div className='forgot-password'>
                         Quên mật khẩu?

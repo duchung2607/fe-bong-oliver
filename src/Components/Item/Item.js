@@ -9,14 +9,17 @@ function Item(props) {
     props.handleClick(id)
   }
   return (
-    <div className='main-item' style={{ ...props.sx }} onClick={()=> {clickItem(props?.id)}}>
-      <div className= {check? "card check" : "card"}
-      //  style={check&& {border: "1px solid #fc3"}}
-       >
+    <div className='main-item' style={{ ...props.sx }} onClick={() => { clickItem(props?.id) }}>
+      <div className={check ? "card check" : "card"}>
         <div className='card-body'>
-          {/* <img className='img-item' src='https://30shine-store-images.s3.ap-southeast-1.amazonaws.com/uploads/small_Hoang_Dung_cd7a187836.png'></img> */}
-          {/* {{...props.content.src}} */}
-          <img className='img-item' src={props?.content?.src}></img>
+          {/* <img className='img-item' src={props?.content?.src}></img> */}
+          <div className="image-item">
+            <div style={{
+              height:"100%"
+            }}>
+              <img className='img-item' src={props?.content?.src}></img>
+            </div>
+          </div>
           <div className='content-item'>
             <div className='title'>
               {props?.content?.title}

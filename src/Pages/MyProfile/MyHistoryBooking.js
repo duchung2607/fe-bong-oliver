@@ -19,7 +19,7 @@ function MyHistoryBooking() {
     }, [page, pageSize])
 
     const fetchData = async () => {
-        var res = await getMyHistoryBooking(page,pageSize)
+        var res = await getMyHistoryBooking(jwtDecode(sessionStorage.getItem("token")).name,page,pageSize)
         setBooking(res?.data?.data)
     }
 
@@ -51,8 +51,9 @@ function MyHistoryBooking() {
                                             <td>{booking?.price.toLocaleString('vi', { style: 'currency', currency: 'VND' })}</td>
                                             <td className='center'>
                                                 {
-                                                    booking?.status == "done" ? <span className='btn-status done'>Hoàn thành</span> :
-                                                    booking?.status == "wait" && <span className='btn-status wait'>Mới</span>
+                                                    booking?.status == "done" ? <span className='btn-status done'>Hoàn tất</span> :
+                                                    booking?.status == "wait" ? <span className='btn-status wait'>Mới</span> :
+                                                    <span className='btn-status cancel'>Đã hủy</span>
 
                                                 }
                                             </td>

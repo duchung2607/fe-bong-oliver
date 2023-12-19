@@ -6,10 +6,11 @@ import Carousel from '../../Components/Carousel/Carousel'
 import { getServices } from '../../Axios/handleAPI'
 import Footer from '../../Components/Footer/Footer'
 import { useNavigate } from 'react-router-dom'
-
+const types = ['CẮT - GỘI - SẤY', 'UỐN - DUỖI', 'NHUỘM', 'DỊCH VỤ KHÁC']
 function Service() {
   const [services, setServices] = useState()
-  const [serviceTypes, setServiceType] = useState(['CẮT - GỘI - SẤY', 'UỐN - DUỖI', 'NHUỘM', 'DƯỠNG - PHỤC HỒI', 'THƯ GIÃN', 'DỊCH VỤ KHÁC'])
+  const [typeSearch, setTypeSearch] = useState("Tất cả")
+  const [serviceTypes, setServiceType] = useState(['CẮT - GỘI - SẤY', 'UỐN - DUỖI', 'NHUỘM', 'DỊCH VỤ KHÁC'])
   const navigate = useNavigate()
   useEffect(() => {
     fetchData();
@@ -37,37 +38,47 @@ function Service() {
         <div className='border-carousel'>
           <div className='main-border-carousel'>
             <div className='item-border-carousel'>
-              Chất lượng cao
+              Kinh nghiệm
             </div>
             <div className='item-border-carousel'>
-              Chất lượng cao
-            </div>
-            <div className='item-border-carousel'>
-              <img src='https://shop.30shine.com/icons/new-usp-icon-4.svg'></img>
               Cam kết chất lượng
+            </div>
+            <div className='item-border-carousel'>
+              {/* <img src='https://shop.30shine.com/icons/new-usp-icon-4.svg'></img> */}
+              Uy tín
             </div>
           </div>
         </div>
         <div className='menu-tab'>
           <ul>
             {
-              serviceTypes.map((type, typeKey) => (
-                <a href={'#type'+typeKey}><li>{type}</li></a>
+              types.map((type, typeKey) => (
+                <a href={'#type' + typeKey}><li>{type}</li></a>
               ))
             }
           </ul>
         </div>
         <div className='group-service'>
+          <div className='search-group'>
+            <select onChange={(e) => setServiceType(e.target.value != "all"? [e.target.value] :types)}>
+              {
+                types.map((type, index) => (
+                  <option value={type}>{type}</option>
+                ))
+              }
+                  <option value="all">TẤT CẢ</option>
+            </select>
+          </div>
           {
             serviceTypes.map((type, typeKey) => (
               <>
-                <div className='title-list-service' id={'type'+typeKey}>
+                <div className='title-list-service' id={'type' + typeKey}>
                   {type}
                 </div>
                 <div className='list-service'>
                   {
-                    services?.filter(s => s.serviceTypeDTO.id == typeKey + 1).map((service, key) => (
-                      <Item sx={{ height: 400, width: '100%' }}
+                    services?.filter(s => s.serviceTypeDTO.name == type).map((service, key) => (
+                      <Item sx={{ height: 500, width: '100%' }}
                         content={{
                           src: service.image,
                           title: service.name,

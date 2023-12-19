@@ -1,32 +1,37 @@
-.main-hair-style{
+.main-hair-style {
     width: 100%;
     height: 100%;
 
     background-color: #fff;
 }
-.main-hair-style .navbar{
+
+.main-hair-style .navbar {
     /* height: 80px; */
     width: 100%;
 
     padding: 0px;
 }
-.main-hair-style .main{
+
+.main-hair-style .main {
     height: 100%;
     width: 100%;
 
     display: flex;
     justify-content: center;
 
-    /* margin-top: 50px; */
+    padding-top: 50px;
 }
-.main-hair-style .group-main{
+
+.main-hair-style .group-main {
     height: 100%;
     width: 80%;
 }
-.main-hair-style .group-category{
+
+.main-hair-style .group-category {
     display: flex;
 }
-.group-category .btn{
+
+.group-category .btn {
     height: 45px;
     width: 150px;
     border: none;
@@ -40,6 +45,7 @@
     justify-content: center;
     align-items: center;
 }
+
 /* .group-category .btn{
     border: none;
     background-color: black;
@@ -49,17 +55,18 @@
     margin-right: 20px;
 } */
 
-.group-category .on-focus{
+.group-category .on-focus {
     background-color: #fff;
     color: black;
 
     border: 1px solid black;
 }
-.group-category i{
+
+.group-category i {
     margin-right: 5px;
 }
 
-.like-number{
+.like-number {
     background-color: #fc3;
     font-family: sans-serif;
     height: 20px;
@@ -73,7 +80,7 @@
     align-items: center;
 }
 
-.main-hair-style .title-hair-style{
+.main-hair-style .title-hair-style {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: auto;
@@ -88,12 +95,12 @@
     display: flex;
     flex-direction: column;
 }
-.main-hair-style .title-hair-style span{
+
+.main-hair-style .title-hair-style span {
     font-weight: 700;
 }
 
-.main-hair-style .list-hair-style{
-
+.main-hair-style .list-hair-style {
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
@@ -106,7 +113,7 @@
     background-color: #fff;
 }
 
-.main-hair-style .title-list-hair-style{
+.main-hair-style .title-list-hair-style {
     /* width: 80%; */
     height: 50px;
     /* background-color: red; */
@@ -124,4 +131,26 @@
     justify-content: center;
 
     border-left: 10px solid #fc3;
+}
+
+@media screen and (max-width: 1500px) {
+    .main-hair-style .list-hair-style {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .main-hair-style .list-hair-style {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main-hair-style .list-hair-style {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .main-hair-style .list-hair-style {
+        grid-template-columns: 100%;
+    }
 }

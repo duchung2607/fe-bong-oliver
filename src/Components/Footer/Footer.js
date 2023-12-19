@@ -7,7 +7,7 @@ function Footer() {
       <div className='content-footer'>
         <div className='footer-col'>
           <span>SALON TÓC BỔNG OLIVER</span>
-          <div style={{marginBottom:"10px"}}>139 Đ. Quang Trung, P. Kỳ Liên, TX. Kỳ Anh, Hà Tĩnh</div>
+          <div style={{marginBottom:"30px"}}>139 Đ. Quang Trung, P. Kỳ Liên, TX. Kỳ Anh, Hà Tĩnh</div>
           <span>CHẤP NHẬN THANH TOÁN</span>
           <div>
             <img className='logo-vnpay' src='https://cdn.haitrieu.com/wp-content/uploads/2022/10/Icon-VNPAY-QR.png' />
@@ -16,7 +16,7 @@ function Footer() {
 
         <div className='footer-col'>
           <span>LIÊN HỆ</span>
-          <div style={{marginBottom:"10px"}}>
+          <div style={{marginBottom:"30px"}}>
             <a href='https://www.facebook.com/profile.php?id=100083406303730' target='blank'>
               Fanpage : Bổng Oliver
             </a>
@@ -36,7 +36,7 @@ function Footer() {
       </div>
       <div style={{width: "70%"}}>
         <div style={{paddingTop:"20px", color:"rgb(109,109,109)"}}>
-          Copyright ©2023 Đức Hùng. All Right Reserved
+          Copyright ©2023 Hoa Hồng. All Right Reserved
         </div>
       </div>
     </div>

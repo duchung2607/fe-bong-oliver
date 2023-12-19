@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { checkPayMent } from '../../Axios/handleAPI'
+import { checkPayIn, checkPayMent } from '../../Axios/handleAPI'
 import './VnPay.css'
 import Loading from '../../Components/Loading/Loading'
 

@@ -22,7 +22,7 @@ instance.interceptors.response.use(
         return response.data
     },
     (error) => {
-        console.log(error)
+        return error.response
     }
 );
 export default instance;

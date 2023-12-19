@@ -18,9 +18,6 @@ function MyProfile() {
     }, [])
 
     const fetchData = async () => {
-
-        console.log(params)
-
         var res = await getMyProfile()
         setUser(res?.data?.data)
         setData({
